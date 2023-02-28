@@ -5,49 +5,61 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<link rel="stylesheet" href="./styles.css" type="text/css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Source+Sans+Pro:wght@300&display=swap"
+		rel="stylesheet" />
+	<script type="text/javascript" src="./script.js"></script>
 	<title>Encriptador de texto - Challenge Alura</title>
 </head>
 
-<body>
+<body onload="anim()">
 	
+
 	<header>
-		<a href="https://www.aluracursos.com/"><img class="logo_alura" src="./assets/icon-menu-alura_espanhol.svg"alt="logo alura"></a>
-		<h2 class="hdr_text">Alura Challenges ONE</h2>	
+		<a href="https://www.aluracursos.com/"><img class="logo_alura" src="./assets/icon-menu-alura_espanhol.svg"
+				alt="logo alura"></a>
+		<h2 class="hdr_text">Alura Challenges ONE</h2>
 	</header>
-	
+
 	<main>
 
 		<div class="left_container">
 			<h1><span class="title_text" id="title_text">#Encriptador</span> de texto</h1>
-			<div class="radio_container">
+			<form class="radio_container">
 				<input type="radio" id="crypt" class="selector" name="selector" value="crypt">
-				<label for="crypt">Encriptar</label>
+				<label for="crypt" class="lbl" id="lbl1">Encriptar</label>
 				<input type="radio" id="decrypt" class="selector" name="selector" value="decrypt">
-				<label for="decrypt">Desencriptar</label>
-			</div>
-			<button class="btn" id="main_btn">Encriptar</button>
+				<label for="decrypt" class="lbl" id="lbl2">Desencriptar</label>
+				<form />
+				<div class="btn_container">
+					<button class="btn" id="main_btn">#Ejecutar</button>
+					
+				</div>
 		</div>
-		
+
 		<div class="right_container">
 			<div class="box_container">
 				<textarea name="input_box" id="inputbox" class="text_box" cols="38" rows="24"
-				placeholder="Por favor ingrese un texto para continuar..." resize : none></textarea>
-			<button class="btn">Pegar texto <span class="btn_tag1">a encriptar</span></button></div>
+					placeholder="Por favor ingrese su texto ..." resize : none></textarea>
+				<button class="btn">Pegar texto a <span class="btn_tag" id="tag_1">encriptar</span></button>
+			</div>
 
-				
+
 			<div class="box_container">
-			<textarea name="output_box" id="output_box" class="text_box" cols="38" rows="24"
-				placeholder="Esperando.."  readonly></textarea>
-				<button class="btn">Copiar texto <span class="btn_tag2">encriptado</span></button>
+				<textarea name="output_box" id="output_box" class="text_box" cols="38" rows="24"
+					placeholder="Esperando ..." readonly></textarea>
+				<button class="btn">Copiar texto <span class="btn_tag" id="tag_2">encriptado</span></button>
 			</div>
 		</div>
 
 	</main>
-	
-	<footer><hr></footer>
+
+	<footer>
+		<hr>
+	</footer>
 
 
 
@@ -76,7 +88,7 @@
 
 
 
-	
+
 </body>
 
 </html>
